@@ -197,9 +197,10 @@ M83
 M73 P0 ; enable build progress
 G162 X Y F3000 ; home XY maximum
 G161 Z F1200 ; home Z minimum
-G1 Z5 ; move Z to 5
-G4 P10000 ; wait so I can observe
-G161 Z F100 ; home Z slowly
+G92 Z-5 ; set Z to -5
+G1 Z0 ; move Z to 0
+G28 Z ;
+; G161 Z F100 home Z slowly
 M132 X Y Z A B ; recall home offsets
 G1 X-145 Y-75 Z30 F9000 ; move to wait position off table
 G130 X20 Y20 Z20 A20 B20 ; lower stepper Vrefs while heating
