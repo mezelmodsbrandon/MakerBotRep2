@@ -209,7 +209,7 @@ G92 Z-5 (set Z to -5)
 
 G1 Z0.0 (move Z to "0")
 
-G161 Z F100 (home Z axis minimum)
+G28 ; better homing
 
 M132 X Y Z A B (Recall stored home offsets for XYZAB axis)
 
