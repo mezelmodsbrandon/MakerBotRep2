@@ -197,8 +197,7 @@ M83
 M73 P0 ; enable build progress
 G162 X Y F3000 ; home XY maximum
 G161 Z F1200 ; home Z minimum
-G92 Z-5 ; set Z to -5
-G1 Z0 ; move Z to 0
+G1 Z5 ; move Z to 5
 G161 Z F100 ; home Z slowly
 M132 X Y Z A B ; recall home offsets
 G1 X-145 Y-75 Z30 F9000 ; move to wait position off table
