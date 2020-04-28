@@ -194,15 +194,25 @@
 G90
 M83
 ; **** Replicator 2 start.gcode ****
-M73 P0 ; enable build progress
-G21
-G90
-G162 X Y F3000 ; home XY maximum
-G161 Z F1200 ; home Z minimum
-G92 Z-5 ; set Z to -5
-G1 Z0 ; move Z to 0
-G161 Z F100 ; home Z slowly
-M132 X Y Z A B ; recall home offsets
+
+M73 P0 (enable build progress)
+
+G21 (set units to mm)
+
+G90 (set positioning to absolute)
+
+G162 X Y F2500 (home XY axes maximum
+
+G161 Z F1100 (home Z axis minimum)
+
+G92 Z-5 (set Z to -5)
+
+G1 Z0.0 (move Z to "0")
+
+G161 Z F100 (home Z axis minimum)
+
+M132 X Y Z A B (Recall stored home offsets for XYZAB axis)
+
 G1 X-145 Y-75 Z30 F9000 ; move to wait position off table
 G130 X20 Y20 Z20 A20 B20 ; lower stepper Vrefs while heating
 M127
