@@ -195,6 +195,8 @@ G90
 M83
 ; **** Replicator 2 start.gcode ****
 M73 P0 ; enable build progress
+G21
+G90
 G162 X Y F3000 ; home XY maximum
 G161 Z F1200 ; home Z minimum
 G92 Z-5 ; set Z to -5
